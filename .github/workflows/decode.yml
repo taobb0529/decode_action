@@ -1,9 +1,12 @@
 name: Decode JavaScript File
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+    paths:
+      - "input.js"
+      - "input.py"   
 jobs:
   decode:
     runs-on: ubuntu-latest
